@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    height: 100vh;
+    background-image: url("./images/wall1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(8px);
+    font-family: Poppins;
+   
+    
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    
+}
+
+.box1, .box2{
+       
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.9);
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 0px 15px 15px 15px;
+    min-width: 600px;
+    margin-top: 15px;
+    height: 330px;
+   
+}
+
+.topo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dados-pedido, .itens-pedido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 55%;
+}
+
+.botoes-acoes .adiciona {
+    margin-top: 15px;
+    background: linear-gradient(to bottom right, #FFFF00, #FF4500);
+    width: 120px;
+    height: 35px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Poppins;
+}
+
+.botoes-acoes .remove {
+    margin-top: 15px;
+    background: #FF4500;
+    color: white;
+    width: 120px;
+    height: 35px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Poppins;
+}
+
+.box-lista {
+    overflow: scroll;
+    width: 100%;
+    height: 25vh;
+    
+}
+
+
+.box-lista ul{
+    padding: 5px; 
+    display: flex;
+    flex-direction: column;    
+    flex-wrap: wrap;
+    font-weight: bold;
+    font-family: Poppins;
+    font-size: 15px;
+    gap: 5px 0px;    
+    
+}
+
+.itens-pedido button:hover {
+    background: #FFFF00;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.9);
+    transform: scale(1.05);
+    transition: 100ms linear;
+    color: #FF4500
+}
+
+.botao-impressao button{
+    background: linear-gradient(to bottom right, #FFFF00, #FF4500);
+    width: 150px;
+    height: 45px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Poppins;
+
+}
+
+@media print {
+   .box1{
+    box-shadow: none;
+    border: none;
+    border-radius: none;
+    height: 100px;
+   }
+
+   .topo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 12px;
+    width: 100vw;
+   }
+
+   .topo h3 {
+    display: none;
+   }
+
+
+   .dados-pedido, .itens-pedido, .item {
+    display:none;
+   }
+
+   .box2{
+    
+    margin-top: 30px;
+    box-shadow: none;
+    border: none;
+    border-radius: none;
+    padding: 0px 15px 15px 15px;
+    
+   
+   }
+
+   button {
+    display: none;
+   }
+
+   .container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+   }
+
+   .box-lista{
+    overflow: hidden;
+    height: auto;
+}
+
+
+
+}

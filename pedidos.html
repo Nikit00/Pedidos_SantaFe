@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SantaFé</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="imagem/png" href="./images/logo-SantaFe.png "/>
+    <script src="./script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">
+            <div class="topo">
+                <img src="./images/logo-SantaFe.png" alt="logo-loja" height="100">
+                <h2>Santa Fé Frios e Fatiados</h2>
+                <h3>Pedidos - Fatiação</h3>
+            </div>
+            <div class="dados-pedido">
+                <div class="item">                
+                    <span>Numero do Pedido:</span>
+                    <input type="number" id="pedido">
+                </div>
+                <div class="item">
+                    <span>Cliente</span>
+                    <input type="text" id="cliente">
+                 </div>
+            </div>
+            <div class="itens-pedido">
+                <h4>Adicionar Itens para Fatiação</h4>
+                <div class="item">
+                    <span>Produto</span>
+                    <input type="text" id="produto">
+                </div>
+                <div class="item">
+                    <span>Quantidade</span>
+                    <input type="number"id="quantidade">
+                </div>
+                <div class="item">
+                    <label for="tipo">Tipo</label>
+                
+                    <select id="tipo">
+                        <option value="gramas">Gramas</option>
+                        <option value="unidades">Unidade</option>
+                        <option value="reais">Reais</option>
+                        <option value="kg">Kg</option>
+                    </select>
+                
+                </div>
+                <div class="botoes-acoes">
+                    <button class="adiciona" onclick="adicionarItem()">Adicionar Item</button>
+                    <button class="remove" onclick="removerItem()">Remover Item</button>                 
+                </div> 
+            </div>
+        </div>
+        <div class="box2">
+            <div class="preview-pedido">
+                <h4>Pedido: <span id="pedido-impressao"></span></h4>
+                <h4>Cliente: <span id="cliente-impressao"></span></h4>
+                <h4>Data: <span id="data-auto"></span></h4>
+                <span>--- Itens da Fatiação ---</span>
+                <br>
+                <div class="box-lista">
+                    <ul class="ul-lista" id="lista">
+                        
+                    </ul>
+                </div>
+                
+               
+            </div>
+        </div>
+        <div class="botao-impressao">
+            <button onclick="confirmarPedido()">CONFIRMAR PEDIDO</button>
+        </div>
+        </div>
+        <span id="test1"></span>
+    </div>
+    
+</body>
+</html>
